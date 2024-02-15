@@ -23,6 +23,9 @@ return (
                </button>
            </div>
         </DialogTrigger>
+        <DialogContent>
+            <CreateOrganization/>
+        </DialogContent>
     </Dialog>
 );
 
