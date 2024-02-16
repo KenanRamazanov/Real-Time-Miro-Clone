@@ -32,7 +32,6 @@ export const Item = ({
     setActive({organization: id});
  };
 
-
  return (
 
     <div className="aspect-square relative">
