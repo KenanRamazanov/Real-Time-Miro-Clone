@@ -11,7 +11,6 @@ DialogTrigger
 import { Hint } from "@/components/hint";
 
 export const NewButton = () => {
-
 return (
     <Dialog>
         <DialogTrigger asChild>
