@@ -8,9 +8,7 @@ return (
         <div className="hidden lg:flex lg:flex-1 bg-yellow-500">
         Search
         </div>
-
         <UserButton/>
-
     </div>
 );
 };
