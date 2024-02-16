@@ -22,7 +22,7 @@ const DashboardLayout = ({
       </div>
     </div>
    </main>
-  )
-}
+  );
+};
 
 export default DashboardLayout;
