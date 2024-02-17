@@ -9,6 +9,7 @@ useOrganizationList
 
 import { cn } from "@/lib/utils"
 
+import { Hint } from "@/components/hint"
 
 interface ItemProps {
     id:string;
@@ -35,6 +36,12 @@ export const Item = ({
  return (
 
     <div className="aspect-square relative">
+      <Hint
+      label={name}
+      side="right"
+      align="start"
+      sideOffset={18}
+      >
       <Image
       fill
       alt={name}
@@ -45,6 +52,8 @@ export const Item = ({
         isActive && "opacity-100"
       )}
       />
+      </Hint>
+
     </div>
  )
 
