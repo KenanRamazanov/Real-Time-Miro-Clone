@@ -1,4 +1,5 @@
 import React from 'react'
+import { EmptyOrg } from './_components/empty-org';
 
 const DashboardPage = () => {
   return (
