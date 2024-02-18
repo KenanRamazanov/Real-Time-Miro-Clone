@@ -9,9 +9,13 @@ import {
   useEffect,
   useState,
 } from "react";
+import { Input } from "@/components/ui/input";
 export const SearchInput = () => {
   return (
-    <div>SearchInput</div>
+    <div className="w-full relative">
+   <Search/>
+   <Input/>
+    </div>
   );
 };
 
