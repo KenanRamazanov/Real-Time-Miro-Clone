@@ -2,6 +2,7 @@
 
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
+import { EmptySearch } from "./empty-search";
 interface BoardListProps {
  orgId: string;
  query: {
@@ -19,7 +20,7 @@ export const BoardList = ({
     if (!data?.length && query.search) {
         return (
             <div>
-                Try searching for something else
+               <EmptySearch/>
             </div>
         )
       }
