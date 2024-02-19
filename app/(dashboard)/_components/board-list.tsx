@@ -3,6 +3,7 @@
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { EmptySearch } from "./empty-search";
+import { EmptyFavorites } from "./empty-favorites";
 interface BoardListProps {
  orgId: string;
  query: {
@@ -18,19 +19,12 @@ export const BoardList = ({
     const data = []
 
     if (!data?.length && query.search) {
-        return (
-            <div>
-               <EmptySearch/>
-            </div>
-        )
+        return <EmptySearch/>;
+
       }
     
       if (!data?.length && query.favorites) {
-        return (
-            <div>
-                No favorites
-            </div>
-        )
+        return <EmptyFavorites/>
       }
     
       if (!data?.length) {
