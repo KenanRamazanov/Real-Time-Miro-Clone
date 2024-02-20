@@ -4,6 +4,7 @@ import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { EmptySearch } from "./empty-search";
 import { EmptyFavorites } from "./empty-favorites";
+import { EmptyBoards } from "./empty-boards";
 interface BoardListProps {
  orgId: string;
  query: {
@@ -28,11 +29,7 @@ export const BoardList = ({
       }
     
       if (!data?.length) {
-        return (
-            <div>
-                No boards at all
-            </div>
-        )
+        return <EmptyBoards/>
       }
     return (
         <div>
