@@ -1,9 +1,10 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-
-
+import { api } from "@/convex/_generated/api";
+import { useMutation } from "convex/react";
 export const EmptyBoards = () => {
-
+const crate = useMutation(api.board.create)
 return (
     <div className="h-full flex flex-col items-center justify-center">
       <Image
