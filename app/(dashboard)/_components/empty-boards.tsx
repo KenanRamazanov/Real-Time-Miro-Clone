@@ -3,8 +3,18 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { api } from "@/convex/_generated/api";
 import { useMutation } from "convex/react";
+import { useOrganization } from "@clerk/nextjs";
 export const EmptyBoards = () => {
-const crate = useMutation(api.board.create)
+const create = useMutation(api.board.create)
+const { organization } = useOrganization();
+const onClick = () => {
+  if (!organization) return;
+
+    create ({
+  orgId: organization.id,
+  title: "Untitled"
+    })
+    };
 return (
     <div className="h-full flex flex-col items-center justify-center">
       <Image
