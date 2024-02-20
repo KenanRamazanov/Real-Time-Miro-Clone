@@ -30,7 +30,7 @@ return (
         Start by creating a board for your organization
       </p>
       <div className="mt-6">
-        <Button  size="lg">
+        <Button onClick={onClick}  size="lg">
           Create board
         </Button>
       </div>
