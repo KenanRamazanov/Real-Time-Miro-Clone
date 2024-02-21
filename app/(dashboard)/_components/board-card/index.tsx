@@ -6,5 +6,5 @@ export const BoardCard = () => {
         <div>
             Board Card
         </div>
-    )
-}
+    );
+};
