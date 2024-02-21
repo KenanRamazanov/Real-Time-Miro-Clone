@@ -22,6 +22,15 @@ export const BoardList = ({
       ...query,
     });
 
+if (data === undefined) {
+  return (
+    <div>
+      Loading...x
+    </div>
+  )
+}
+
+
     if (!data?.length && query.search) {
         return <EmptySearch/>;
 
@@ -36,7 +45,9 @@ export const BoardList = ({
       }
     return (
         <div>
-          {JSON.stringify(query)}
+      <h2 className="text-3xl">
+      {query.favorites ? "Favorite boards" : "Team boards"}
+      </h2>
         </div>
     )
   }  
