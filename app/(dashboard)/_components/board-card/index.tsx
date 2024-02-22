@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Overlay } from "./overlay";
-
+import { formatDistanceToNow } from "date-fns";
 
 interface BoardCardProps {
     id: string;
