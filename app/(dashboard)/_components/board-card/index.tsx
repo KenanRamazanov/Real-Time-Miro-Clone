@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Overlay } from "./overlay";
 import { formatDistanceToNow } from "date-fns";
 import { useAuth } from "@clerk/nextjs";
+import { Footer } from "./footer";
 
 interface BoardCardProps {
     id: string;
@@ -45,12 +46,11 @@ export const BoardCard: React.FC<BoardCardProps> = ({
              <Overlay/>
          </div>
          <Footer
-          isFavorite={isFavorite}
+     
           title={title}
           authorLabel={authorLabel}
           createdAtLabel={createdAtLabel}
-          onClick={toggleFavorite}
-          disabled={pendingFavorite || pendingUnfavorite}
+        
          />
        </div>
       </Link>
