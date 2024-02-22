@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Overlay } from "./overlay";
 
 
 interface BoardCardProps {
@@ -35,6 +36,7 @@ export const BoardCard: React.FC<BoardCardProps> = ({
               fill
               className="object-fit"
              />
+             <Overlay/>
          </div>
        </div>
       </Link>
