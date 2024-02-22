@@ -44,6 +44,14 @@ export const BoardCard: React.FC<BoardCardProps> = ({
              />
              <Overlay/>
          </div>
+         <Footer
+          isFavorite={isFavorite}
+          title={title}
+          authorLabel={authorLabel}
+          createdAtLabel={createdAtLabel}
+          onClick={toggleFavorite}
+          disabled={pendingFavorite || pendingUnfavorite}
+         />
        </div>
       </Link>
     );
