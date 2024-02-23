@@ -24,7 +24,7 @@ export const BoardList = ({
       ...query,
     });
 
-if (true) {
+if (data === undefined) {
   return (
     <div>
     <h2 className="text-3xl">
