@@ -6,6 +6,8 @@ import { Overlay } from "./overlay";
 import { formatDistanceToNow } from "date-fns";
 import { useAuth } from "@clerk/nextjs";
 import { Footer } from "./footer";
+import { Skeleton } from "@/components/ui/skeleton";
+
 
 interface BoardCardProps {
     id: string;
@@ -13,22 +15,21 @@ interface BoardCardProps {
     authorName: string;
     authorId: string;
     createdAt: number;
-    
     imageUrl: string;
     orgId: string;
     isFavorite: boolean;
 }
 
-export const BoardCard: React.FC<BoardCardProps> = ({
-    id,
-    title,
-    authorName,
-    authorId,
-    createdAt,
-    imageUrl,
-    orgId,
-    isFavorite
-}) => {
+export const BoardCard = ({
+  id,
+  title,
+  authorId,
+  authorName,
+  createdAt,
+  imageUrl,
+  orgId,
+  isFavorite,
+}: BoardCardProps) => {
     const { userId } = useAuth();
     const authorLabel = userId === authorId ? "You" : authorName;
     const createdAtLabel = formatDistanceToNow(createdAt, {
@@ -58,3 +59,11 @@ export const BoardCard: React.FC<BoardCardProps> = ({
       </Link>
     );
 };
+
+BoardCard.Skeleton = function BoardCardSkeleton() {
+  return (
+    <div className="aspect-[100/127] rounded-lg overflow-hidden">
+      <Skeleton className="h-full w-full" />
+    </div>
+  )
+}
