@@ -36,6 +36,9 @@ if (data === undefined) {
       <BoardCard.Skeleton />
       <BoardCard.Skeleton />
       <BoardCard.Skeleton />
+      <BoardCard.Skeleton />
+      <BoardCard.Skeleton />
+
     </div>
   </div>
   )
