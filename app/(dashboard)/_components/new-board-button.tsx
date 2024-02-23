@@ -24,7 +24,7 @@ export const NewBoardButton:React.FC<NewBoardButtonProps> = ({
         })
         .then ((id) => {
             toast.success("Board created");
-            router.push(`/board/${id}`);
+            //TODO: Redirect to /board/{id}
         })
         .catch(() => toast.error("Failed to create board"));
      }
