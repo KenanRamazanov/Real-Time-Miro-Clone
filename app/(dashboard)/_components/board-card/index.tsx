@@ -12,7 +12,8 @@ interface BoardCardProps {
     title: string;
     authorName: string;
     authorId: string;
-    createdAt: string;
+    createdAt: number;
+    
     imageUrl: string;
     orgId: string;
     isFavorite: boolean;
