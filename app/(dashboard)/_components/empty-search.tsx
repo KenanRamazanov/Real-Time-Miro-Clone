@@ -16,5 +16,5 @@ export const EmptySearch = () => {
                Try searching for something else
             </p>
         </div>
-    )
-}
+    );
+};
