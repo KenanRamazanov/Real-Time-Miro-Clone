@@ -44,7 +44,6 @@ if (data === undefined) {
   )
 }
 
-
     if (!data?.length && query.search) {
         return <EmptySearch/>;
 
