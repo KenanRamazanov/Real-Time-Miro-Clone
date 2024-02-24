@@ -11,6 +11,7 @@ interface NewBoardButtonProps {
     orgId:string;
     disabled?:boolean;
 }
+
 export const NewBoardButton:React.FC<NewBoardButtonProps> = ({
     orgId,
     disabled
