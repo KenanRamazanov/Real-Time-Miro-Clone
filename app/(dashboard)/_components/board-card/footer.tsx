@@ -48,5 +48,5 @@ event.stopPropagation();
              />
            </button>
         </div>
-    )
-}
+    );
+};
