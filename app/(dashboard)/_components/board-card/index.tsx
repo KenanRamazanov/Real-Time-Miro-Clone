@@ -8,6 +8,7 @@ import { useAuth } from "@clerk/nextjs";
 import { Footer } from "./footer";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Actions } from "@/components/actions";
+import { MoreHorizontal } from "lucide-react";
 
 
 interface BoardCardProps {
@@ -19,7 +20,7 @@ interface BoardCardProps {
     imageUrl: string;
     orgId: string;
     isFavorite: boolean;
-}
+  }
 
 export const BoardCard = ({
   id,
@@ -53,8 +54,11 @@ export const BoardCard = ({
              side="right"
             >
 
-              <button>
-                I am a button
+              <button className="absolute top-1 right-1 opacity-0 group-hover:opacity-100 
+              transition-opacity px-3 py-3 outline-none">
+               <MoreHorizontal
+               className="text-white opacity-75 hover:opacity-100 transition-opacity"
+               />
               </button>
               </Actions>
          </div>
