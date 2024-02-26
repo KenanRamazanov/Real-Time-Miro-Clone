@@ -15,7 +15,7 @@ import { useApiMutation } from "@/hooks/use-api-mutation";
 import { toast } from "sonner";
 import { api } from "@/convex/_generated/api";
 
-import { ConfirmModal } from "./confirm-modal";
+import { ConfirmModal } from "@/components/confirm-modal";
 
 interface ActionsProps {
     children: React.ReactNode;
