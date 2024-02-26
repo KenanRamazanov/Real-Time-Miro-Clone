@@ -15,6 +15,8 @@ import { useApiMutation } from "@/hooks/use-api-mutation";
 import { toast } from "sonner";
 import { api } from "@/convex/_generated/api";
 
+import { ConfirmModal } from "./confirm-modal";
+
 interface ActionsProps {
     children: React.ReactNode;
     side?: DropdownMenuContentProps["side"];
@@ -62,13 +64,20 @@ const {mutate, pending} = useApiMutation(api.board.remove);
             <Link2 className="h-4 w-4 mr-2"/>
             Copy board link
           </DropdownMenuItem>
+          <ConfirmModal
+          header="Delete board?"
+          description="This will delete the board and all of its contents"
+          disabled
+          onConfirm={onDelete}
+          >
           <DropdownMenuItem
-          onClick={onDelete}
+          // onClick={onDelete}
           className="p-3 cursor-pointer">
           
             <Trash2 className="h-4 w-4 mr-2"/>
             Delete
           </DropdownMenuItem>
+          </ConfirmModal>
         </DropdownMenuContent>
        </DropdownMenu>
     )
