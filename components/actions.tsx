@@ -15,6 +15,7 @@ import {
 import { api } from "@/convex/_generated/api";
 import { useApiMutation } from "@/hooks/use-api-mutation";
 import { Button } from "@/components/ui/button";
+import { useRenameModal } from "@/store/use-rename-modal";
 
 interface ActionsProps {
   children: React.ReactNode;
@@ -31,6 +32,8 @@ export const Actions = ({
   id,
   title,
 }: ActionsProps) => {
+const {onOpen} = useRenameModal();
+
   const { mutate, pending } = useApiMutation(api.board.remove);
 
   const onCopyLink = () => {
@@ -66,6 +69,7 @@ export const Actions = ({
           Copy board link
         </DropdownMenuItem>
         <DropdownMenuItem
+        onClick={() => onOpen(id,title)}
           className="p-3 cursor-pointer"
         >
           <Pencil className="h-4 w-4 mr-2" />
