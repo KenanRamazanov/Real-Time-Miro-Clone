@@ -82,5 +82,4 @@ export const remove = mutation({
   
       return board;
     },
-    
   });
