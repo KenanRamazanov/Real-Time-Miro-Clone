@@ -91,8 +91,8 @@ export const BoardCard = ({
           title={title}
           authorLabel={authorLabel}
           createdAtLabel={createdAtLabel}
-          onClick= {() => {}}
-          disabled={false}
+          onClick= {toggleFavorite}
+          disabled={pendingFavorite || pendingUnfavorite}
          />
        </div>
       </Link>
